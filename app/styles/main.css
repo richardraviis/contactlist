@@ -121,6 +121,7 @@ body{
 .media-main .info {
     overflow: hidden;
     color: #000;
+    height: 120px;
 }
 .media-main .info h4 {
     padding-top: 10px;
@@ -154,5 +155,37 @@ background-color: #0088AA;
 }
 
 .container-banner{
+	position: relative;
 	padding-bottom: 50px;
 }
+
+.banner-text{
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	font-size: 40px;
+	color: #ffffff;
+	font-style: verdana;
+}
+
+.text-small{
+top:80px;
+	left: 50px;	
+font-size: 20px;	
+}
+
+.panel-contact{
+	height: 220px;
+	
+}
+
+.modal-dialog{
+   position: relative;
+   left: 50%;
+   /* now you must set a margin left under zero - value is a half width your window */
+   margin-left: -312px;
+   /* this same situation is with height - example */
+   height: 500px;
+   top: 50%;
+   margin-top: -250px;
+} 
