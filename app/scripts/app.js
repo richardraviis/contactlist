@@ -1,17 +1,23 @@
 'use strict';
 
 angular.module('userContacts', ['ngRoute'])
-.run(function(){
+.run(function($rootScope){
+	
+	
+	$rootScope.appContext="http://localhost:9000/";
+	
+	
+	
 	
 })
 .config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/contacts', {
 		templateUrl:'views/viewContacts.html',
-		controller: 'testCtrl'
+		controller: 'userContactsCtrl'
 		
 	}).when('/login', {
-		templateUrl:'views/form-3/index.html',
+		templateUrl:'views/login/index.html',
 		controller: 'loginCtrl'
 		
 	}).otherwise({redirectTo: '/login'});
