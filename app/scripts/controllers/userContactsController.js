@@ -44,7 +44,7 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		};
 		
 		$scope.editContact = function(id){
-
+alert(id);
 			commonService.getContactDetails(id).then(function(data){
 				$scope.editContactObj=data[0];
 	        	$scope.fullName= data[0].fullName;
@@ -59,7 +59,11 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 				$scope.id = data[0].id;
 				
 				
+			})
+			.error(function(){
+				
 			});
+			
 						
 			$("#editContactModal").modal('show');
 		};
@@ -85,26 +89,51 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
            
            
 			$scope.contacts.push(temp);
+			$("#editContactModal").modal('hide');
 			
 		}; 
 		
-		$scope.addContact = function()
+		$scope.saveNewContact = function()
 		{
+			
+			var randomNumber = Math.floor(Math.random() * 20 );
+			
 			var temp = {
-	        		   "id":"11",
+	        		   "id": randomNumber,
 	        		   "name":$scope.fullName,
 	        		   "age":"35",
-	        		   "email": "rr@gmail.com",
-	        		   "jobTitle":"Lead",
-	        		   "Phone":"12345",
+	        		   "email": $scope.email,
+	        		   "jobTitle":$scope.jobTitle,
+	        		   "Phone":$scope.phone,
 	        		   "Picture":"",
-	        		   "Address": "123 Maint St"
+	        		   "Address": $scope.address
 	        	       	   
 	           };
 			$scope.contacts.push(temp);
-			
+			$("#editContactModal").modal('hide');
 			
 		};
+		
+		$scope.addContact = function()
+		{
+			
+			
+			$scope.fullName= "";
+			$scope.email= "";
+			$scope.address= "";
+			$scope.phone= "";
+			$scope.facebook= "";
+			$scope.twitter= "";
+			$scope.linkedin= "";
+			$scope.skype= "";
+			$scope.jobTitle= "";
+			$scope.id = "";
+			$("#editContactModal").modal('show');
+			
+		};
+		
+		
+		
 		
 		
 		$scope.go = function ( path ) {
