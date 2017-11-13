@@ -1,6 +1,6 @@
 <ul class="list-group" id="contact-list">
-                    <li class="list-group-item" ng-repeat="contact in contacts">
-                        <div class="col-xs-12 col-sm-3">v cxcx 
+                    <li class="list-group-item" ng-repeat="contact in contactDetails">
+                        <div class="col-xs-12 col-sm-3">
                             <img src="images/480164327.jpg" alt="Scott Stevens" class="img-responsive img-circle">
                         </div>
                         <div class="col-xs-12 col-sm-9">
@@ -12,7 +12,7 @@
                             <span class="visible-xs"> <span class="text-muted">{{contact.Phone}}</span><br></span>
                             <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" title="{{contact.email}}"></span>
                             <span class="visible-xs"> <span class="text-muted">{{contact.email}}</span><br></span>
-                            <div><button class="btn btn-default" type="button" ng-submit="showDetails('{{contact.id}}')">More</button> </div>
+                            
                         </div>
                         
                         <div class="clearfix"></div>
