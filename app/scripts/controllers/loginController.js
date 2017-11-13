@@ -9,11 +9,16 @@ angular.module('userContacts').controller('loginCtrl', ['$scope', '$rootScope', 
 		//$location.path("/contacts");
 		commonService.authenticateUser($scope.userName).then(function(data){
 			
-			
+			$rootScope.userName = $scope.userName;
 			var user = $scope.userName;
 			
 			if(data[user]!== undefined && data[user] === $scope.password)
 				{
+				if (typeof(Storage) !== "undefined") {
+				      sessionStorage.setItem("username", $scope.userName);
+				    
+				    document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
+				}
 				$location.path("/contacts");
 				 
 				}
