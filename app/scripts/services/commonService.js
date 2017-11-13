@@ -21,5 +21,7 @@ angular.module('userContacts')
 		  
 		  return deferred.promise;
 	  }
+  
+ 
 	  
-  })
+  });
