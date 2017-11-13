@@ -1,17 +1,40 @@
-<ul class="list-group" id="contact-list">
-                    <li class="list-group-item" ng-repeat="contact in contactDetails">
+
+<div class="container-banner" style="margin-top: -40px;">
+<div class="row">
+
+<img src="/images/images.jpg" width="100%" height="200px;" >
+<div class="banner-text">
+Personal Directory
+</div>
+<div class="banner-text text-small">Manage your contacts seamlessly with us</div>
+</div>
+</div>
+
+<div class="container" style="position: absolute; top: 140px; left: 20%;">
+<div class="row">
+<ul class="list-group center" id="contact-list" >
+                    <li class="list-group-item" >
                         <div class="col-xs-12 col-sm-3">
-                            <img src="images/480164327.jpg" alt="Scott Stevens" class="img-responsive img-circle">
+                            <img src="images/User_1.jpg" alt="Scott Stevens" class="img-responsive img-circle">
                         </div>
                         <div class="col-xs-12 col-sm-9">
-                            <span class="name"><strong>{{contact.name}}</strong></span><br>
-                            <span class="title">{{contact.jobTitle}}</span><br>
-                            <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="{{contact.Address}}"></span>
-                            <span class="visible-xs"> <span class="text-muted">{{contact.Address}}</span><br></span>
-                            <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="{{contact.Phone}}"></span>
-                            <span class="visible-xs"> <span class="text-muted">{{contact.Phone}}</span><br></span>
-                            <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" title="{{contact.email}}"></span>
-                            <span class="visible-xs"> <span class="text-muted">{{contact.email}}</span><br></span>
+                            <div class="pull-right"><a href="" ng-click="goTo('/contacts')"> &lt;&lt; Back to List</a></div>
+                            <p class="name-lg"><strong>{{contact.fullName}}</strong></p>
+                            <p class="title">{{contact.jobTitle}}</p>
+                            <p>{{contact.phone}}</p>
+                            <p>{{contact.address}}</p>
+                            <p>{{contact.email}}</p>
+                            <p ><span ><a href="{{contact.facebook}}" target="_blank"><span class="btn btn-primary" style="width: 100px">Facebook</span></a></span>
+                            <span class="social-links"><a href="{{contact.twitter}}" target="_blank"><span class="btn btn-info" style="width: 100px">Twitter</span></a></span></p>
+                            <p><span ><a href="{{contact.linkedin}}" target="_blank"><span class="btn btn-warning" style="width: 100px">LinkedIn</span></a></span>
+                            <span class="social-links"><a href="{{contact.skype}}" target="_blank"><span class="btn btn-danger" style="width: 100px">Skype</span></a></span></p>
+                            
+<!--                             <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="{{contact.address}}"></span> -->
+<!--                             <span class="visible-xs"> <span class="text-muted">{{contact.address}}</span><br></span> -->
+<!--                             <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="{{contact.phone}}"></span> -->
+<!--                             <span class="visible-xs"> <span class="text-muted">{{contact.phone}}</span><br></span> -->
+<!--                             <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" title="{{contact.email}}"></span> -->
+<!--                             <span class="visible-xs"> <span class="text-muted">{{contact.email}}</span><br></span> -->
                             
                         </div>
                         
@@ -22,3 +45,18 @@
                     </li>
                     
                 </ul>
+          </div>
+          
+          <div class="footer">
+      <div class="container-align-center">
+      
+      <div class="row" >
+        <div style="color: #fff;">
+          Copyright &copy; 2017 personaldirectory.com, all rights reserved.
+        </div>
+      </div>
+   </div> 
+</div>
+       </div>
+       
+ 
