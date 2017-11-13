@@ -1,0 +1,13 @@
+{
+"id":"11",
+"fullName":"John Abraham",
+"email": "rr@gmail.com",
+"jobTitle":"Lead Engineer at Cisco",
+"phone":"(312) 593-1486",
+"photo":"/images/user_1.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+}

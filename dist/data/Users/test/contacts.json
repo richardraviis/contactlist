@@ -1,0 +1,81 @@
+[
+{
+"id":"11",
+"fullName":"John Abraham",
+"email": "rr@gmail.com",
+"jobTitle":"Lead Engineer at Cisco",
+"phone":"(312) 593-1486",
+"photo":"/images/user_1.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+},
+{
+"id":"12",
+"fullName":"Richelle Sequeira",
+"email": "rr@gmail.com",
+"jobTitle":"HR Manager at ABC",
+"phone":"(312) 593-1486",
+"photo":"/images/user_2.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+},
+{
+"id":"13",
+"fullName":"Michael Scott",
+"email": "rr@gmail.com",
+"jobTitle":"Digital Lead at XYZ",
+"phone":"(418) 336-4532",
+"photo":"/images/user_1.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+},
+{
+"id":"14",
+"fullName":"Yuriy Shleymovich",
+"email": "rr@gmail.com",
+"jobTitle":"Tech Architect at BOC",
+"phone":"(522) 593-6486",
+"photo":"/images/user_3.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+},
+{
+"id":"15",
+"fullName":"Sachin Tendulkar",
+"email": "rr@gmail.com",
+"jobTitle":"Team Coordinator at BCCI",
+"phone":"(212) 593-1764",
+"photo":"/images/user_1.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+},
+{
+"id":"16",
+"fullName":"Karen Pinto",
+"email": "rr@gmail.com",
+"jobTitle":"Marketing Engineer at OBC",
+"phone":"(112) 888-9988",
+"photo":"/images/user_2.jpg",
+"address": "123 Maint St",
+"facebook":"https://www.facebook.com/",
+"twitter":"https://www.twitter.com/",
+"linkedin":"https://www.linkedin.com/",
+"skype":"https://www.skype.com/"
+}
+
+]
