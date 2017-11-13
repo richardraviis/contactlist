@@ -65,7 +65,7 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		};
 		
 		$scope.saveEditedContact = function() {
-			
+		
          $scope.contacts = $scope.contacts.filter(function(obj){
 				
 				return obj.id !== $scope.id;
@@ -84,7 +84,25 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
            };
            
            
-			$scope.contacts = 
+			$scope.contacts.push(temp);
+			
+		}; 
+		
+		$scope.addContact = function()
+		{
+			var temp = {
+	        		   "id":"11",
+	        		   "name":$scope.fullName,
+	        		   "age":"35",
+	        		   "email": "rr@gmail.com",
+	        		   "jobTitle":"Lead",
+	        		   "Phone":"12345",
+	        		   "Picture":"",
+	        		   "Address": "123 Maint St"
+	        	       	   
+	           };
+			$scope.contacts.push(temp);
+			
 			
 		};
 		
