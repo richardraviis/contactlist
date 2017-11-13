@@ -18,7 +18,7 @@ angular.module('userContacts').controller('loginCtrl', ['$scope', '$rootScope', 
 				if (typeof(Storage) !== "undefined") {
 				      sessionStorage.setItem("username", $scope.userName);
 				    
-				    alert(1);
+				   
 				}
 				$location.path("/contacts");
 				 
