@@ -44,8 +44,9 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		};
 		
 		$scope.editContact = function(id){
-alert(id);
+
 			commonService.getContactDetails(id).then(function(data){
+				alert(JSON.stringify(data));
 				$scope.editContactObj=data[0];
 	        	$scope.fullName= data[0].fullName;
 				$scope.email= data[0].email;
@@ -58,9 +59,6 @@ alert(id);
 				$scope.jobTitle= data[0].jobTitle;
 				$scope.id = data[0].id;
 				
-				
-			})
-			.error(function(){
 				
 			});
 			
