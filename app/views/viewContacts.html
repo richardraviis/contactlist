@@ -17,6 +17,7 @@ Personal Directory
 </div>
 </div>
 
+
 <div class="container bootstrap snippet">
     <div class="row">
         <div class="col-lg-10">
@@ -48,10 +49,11 @@ Personal Directory
             <div class="panel panel-contact">
                 <div class="panel-body p-t-10">
                     <div class="media-main">
-                        <a href="" class="pull-left" ng-click="go('contact.id')">
-                            <img class="thumb-lg img-circle bx-s" ng-src="{{contact.photo}}" alt="" >
+                        <a href="" class="pull-left" >
+                            <img class="thumb-lg img-circle bx-s" ng-src="{{contact.photo}}" alt="" ng-click="go(contact.id)">
                            
                         </a>
+                        
                         <div class="pull-right btn-group-sm">
                             <a class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" ng-click="editContact(contact.id)" data-original-title="Edit">
                                 <i class="fa fa-pencil"></i>
@@ -70,20 +72,18 @@ Personal Directory
                     <hr>
                     <ul class="social-links list-inline p-b-10">
                         <li>
-                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.facebook}}" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.facebook}}" data-original-title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.twitter}}" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.twitter}}" data-original-title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.linkedin}}" data-original-title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.linkedin}}" data-original-title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.skype}}" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.skype}}" data-original-title="Skype" target="_blank"><i class="fa fa-skype"></i></a>
                         </li>
-                        <li>
-                            <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" ng-href="{{contact.email}}" data-original-title="email"><i class="fa fa-envelope-o"></i></a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -120,8 +120,8 @@ Personal Directory
                  <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Full Name</label>
-                      <input type="text" class="form-control"
-                      id="name" ng-model="fullName" placeholder="Full Name"/>
+                      <input type="text" class="form-control required"
+                      id="name"  ng-model="fullName" placeholder="Full Name"/>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="title">Job Title</label>
@@ -189,6 +189,8 @@ Personal Directory
         </div>
     </div>
 </div>
+
+
 
 
 
