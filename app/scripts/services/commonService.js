@@ -30,6 +30,7 @@ angular.module('userContacts')
 	 getContacts: function(){
 		 
 		 var deferred= $q.defer();
+		 $rootScope.userName ="Richard";
 		  var url= $rootScope.appContext +"/data/Users/"+$rootScope.userName+"/contacts.json";
 		 
 		  
@@ -49,7 +50,32 @@ angular.module('userContacts')
 		  });
 		  
 		  return deferred.promise;
-	 }
+	 },
+	  
+	  
+	  getContactDetails: function(id){
+		  var deferred= $q.defer();
+			 $rootScope.userName ="Richard";
+			  var url= $rootScope.appContext +"data/Users/"+$rootScope.userName+"/"+id+".json";
+			 
+			  
+			  $http.get(url, {
+				  headers: {
+					  'Content-Type': 'application/json',
+					  'Accept': 'application/json',
+						  },
+					data: '',
+					async: false
+				  
+				  
+			  }).then(function(data){
+				  
+				  
+				  deferred.resolve(data.data);
+			  });
+			  
+			  return deferred.promise;
+	  }
 	 }
 
 	  
