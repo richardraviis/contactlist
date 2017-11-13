@@ -15,7 +15,8 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		});
 		
 		$scope.showDetails = function(id){
-			$scope.id = id;
+			$scope.id = 11;
+			alert(id);
 			commonService.getContactDetails($scope.id).then(function(data){
 				
 				$scope.contactDetails = data;
@@ -46,18 +47,19 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		$scope.editContact = function(id){
 
 			commonService.getContactDetails(id).then(function(data){
-				alert(JSON.stringify(data));
-				$scope.editContactObj=data[0];
-	        	$scope.fullName= data[0].fullName;
-				$scope.email= data[0].email;
-				$scope.address= data[0].address;
-				$scope.phone= data[0].phone;
-				$scope.facebook= data[0].facebook;
-				$scope.twitter= data[0].twitter;
-				$scope.linkedin= data[0].linkedin;
-				$scope.skype= data[0].skype;
-				$scope.jobTitle= data[0].jobTitle;
-				$scope.id = data[0].id;
+				
+						
+				$scope.editContactObj=data;
+	        	$scope.fullName= data.fullName;
+				$scope.email= data.email;
+				$scope.address= data.address;
+				$scope.phone= data.phone;
+				$scope.facebook= data.facebook;
+				$scope.twitter= data.twitter;
+				$scope.linkedin= data.linkedin;
+				$scope.skype= data.skype;
+				$scope.jobTitle= data.jobTitle;
+				$scope.id = data.id;
 				
 				
 			});
@@ -74,14 +76,17 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 				       
 			});
            var temp = {
-        		   "id":"11",
-        		   "name":$scope.fullName,
-        		   "age":"35",
-        		   "email": "rr@gmail.com",
-        		   "jobTitle":"Lead",
-        		   "Phone":"12345",
-        		   "Picture":"",
-        		   "Address": "123 Maint St"
+        		   "id":$scope.id,
+        		   "fullName":$scope.fullName,
+        		   "email": $scope.email,
+        		   "jobTitle":$scope.jobTitle,
+        		   "phone":$scope.phone,
+        		   "photo":"",
+        		   "address": $scope.address,
+        		   "facebook":$scope.facebook,
+        		   "twitter":$scope.twitter,
+        		   "linkedin":$scope.linkedin,
+        		   "skype":$scope.skype
         	       	   
            };
            
@@ -97,14 +102,17 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 			var randomNumber = Math.floor(Math.random() * 20 );
 			
 			var temp = {
-	        		   "id": randomNumber,
-	        		   "name":$scope.fullName,
-	        		   "age":"35",
+	        		   "id":randomNumber,
+	        		   "fullName":$scope.fullName,
 	        		   "email": $scope.email,
 	        		   "jobTitle":$scope.jobTitle,
-	        		   "Phone":$scope.phone,
-	        		   "Picture":"",
-	        		   "Address": $scope.address
+	        		   "phone":$scope.phone,
+	        		   "photo":"/images/User_1.jpg",
+	        		   "address": $scope.address,
+	        		   "facebook":$scope.facebook,
+	        		   "twitter":$scope.twitter,
+	        		   "linkedin":$scope.linkedin,
+	        		   "skype":$scope.skype
 	        	       	   
 	           };
 			$scope.contacts.push(temp);
