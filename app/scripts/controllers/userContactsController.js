@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootScope', '$location', 'commonService', function($scope, $rootScope, $location, commonService){
 	
          //$scope.searchText="";		
@@ -15,8 +13,8 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		});
 		
 		$scope.showDetails = function(id){
-			$scope.id = 11;
-			alert(id);
+			
+			
 			commonService.getContactDetails($scope.id).then(function(data){
 				
 				$scope.contactDetails = data;
@@ -144,7 +142,9 @@ angular.module('userContacts').controller('userContactsCtrl', ['$scope', '$rootS
 		
 		$scope.go = function ( path ) {
 			
+			sessionStorage.setItem("id", path);
 			path = '/contactDetails/'+path;
+			
 			  $location.path( path );
 			};
 			
