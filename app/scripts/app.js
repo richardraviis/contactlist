@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('userContacts', ['ngRoute'])
 .run(function($rootScope){
 	
@@ -18,7 +16,7 @@ angular.module('userContacts', ['ngRoute'])
 		
 	}).when('/contactDetails/:id', {
 		templateUrl:'views/detailedView.html',
-		controller: 'userContactsCtrl'
+		controller: 'contactDetailsCtrl'
 		
 	}).when('/login', {
 		templateUrl:'views/login/index.html',
